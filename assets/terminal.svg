@@ -12,6 +12,7 @@
       .prompt-caret { fill: #e5e5e5; font-size: 14px; font-weight: 700; }
       .prompt-hint { fill: #6e6e6e; font-size: 13.5px; }
       .shortcut-hint { fill: #555555; font-size: 12px; }
+
       @keyframes blink {
         0%, 49% { opacity: 1; }
         50%, 100% { opacity: 0; }
@@ -19,6 +20,16 @@
       .cursor {
         fill: #f5f5f5;
         animation: blink 1.1s step-end infinite;
+      }
+
+      @keyframes frameCycle {
+        0% { opacity: 1; }
+        3.3333% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      .ascii-frame {
+        opacity: 0;
+        animation: frameCycle 3.60s steps(1, end) infinite;
       }
     </style>
   </defs>
@@ -30,7 +41,7 @@
   <path d="M 16 2 H 884 A 14 14 0 0 1 898 16 V 38 H 2 V 16 A 14 14 0 0 1 16 2 Z" fill="#181818"/>
   <line x1="2" y1="38" x2="898" y2="38" stroke="#242424" stroke-width="1"/>
 
-  <!-- macOS Traffic Light Dots (minimal monochrome like reference) -->
+  <!-- macOS Traffic Light Dots -->
   <circle cx="24" cy="20" r="6" fill="#3a3a3a"/>
   <circle cx="44" cy="20" r="6" fill="#3a3a3a"/>
   <circle cx="64" cy="20" r="6" fill="#3a3a3a"/>
@@ -40,33 +51,556 @@
 
   <!-- Inner TUI Frame -->
   <rect x="24" y="60" width="852" height="306" rx="8" ry="8" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
-  <!-- Legend cutout -->
   <rect x="38" y="51" width="94" height="18" fill="#0c0c0c"/>
   <text x="46" y="64" class="mono box-legend">Losahfirst</text>
 
   <!-- Center Vertical Divider -->
   <line x1="354" y1="84" x2="354" y2="344" stroke="#222222" stroke-width="1"/>
 
-  <!-- LEFT COLUMN: Name + Africa ASCII Emblem + Location -->
+  <!-- LEFT COLUMN: Name + 3D Rotating Africa ASCII Art + Location -->
   <text x="189" y="96" text-anchor="middle" class="mono name-text">Emmanuel GBRA</text>
 
-  <!-- Crisp Africa Silhouette ASCII Art -->
-  <g transform="translate(96, 122)" class="mono ascii">
-    <text x="0" y="0" xml:space="preserve">       ..::::::..           </text>
-    <text x="0" y="13" xml:space="preserve">    .::@@@@@@@@@@::..       </text>
-    <text x="0" y="26" xml:space="preserve">   :@@@@@@@@@@@@@@@@@@:.    </text>
-    <text x="0" y="39" xml:space="preserve">  :@@@@@@@@@@@@@@@@@@@@@:   </text>
-    <text x="0" y="52" xml:space="preserve">  @@@@@@@@@@@@@@@@@@@@@@@:  </text>
-    <text x="0" y="65" xml:space="preserve">  :@@@@@@@@@@@@@@@@@@@@@@@@.</text>
-    <text x="0" y="78" xml:space="preserve">   .::@@@@@@@@*@@@@@@@@@@:. </text>
-    <text x="0" y="91" xml:space="preserve">        :@@@@@@@@@@@@@@:    </text>
-    <text x="0" y="104" xml:space="preserve">         :@@@@@@@@@@@@:     </text>
-    <text x="0" y="117" xml:space="preserve">         :@@@@@@@@@@@:      </text>
-    <text x="0" y="130" xml:space="preserve">          :@@@@@@@@@:  .:   </text>
-    <text x="0" y="143" xml:space="preserve">          :@@@@@@@@:   :@   </text>
-    <text x="0" y="156" xml:space="preserve">           :@@@@@@:    :.   </text>
-    <text x="0" y="169" xml:space="preserve">            :@@@@:          </text>
-    <text x="0" y="182" xml:space="preserve">             :@@:           </text>
+  <g transform="translate(89, 120)" class="mono ascii">
+    <g class="ascii-frame" style="animation-delay: -0.000s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">        $$$$$$$@@@            </text>
+      <text x="0" y="39" xml:space="preserve">      $$$$$$$$$$@@@@@         </text>
+      <text x="0" y="52" xml:space="preserve">    $$$$$$$$$$$$@@@@@@@       </text>
+      <text x="0" y="65" xml:space="preserve">    #$$$$$$$$$$$$@@@@@@@      </text>
+      <text x="0" y="78" xml:space="preserve">    ##$$$$$$$$$$$$@@@@@@@@    </text>
+      <text x="0" y="91" xml:space="preserve">     #$$$$$$$$$$$$$$@@@@@     </text>
+      <text x="0" y="104" xml:space="preserve">           $$$$$$$$$$$@@      </text>
+      <text x="0" y="117" xml:space="preserve">             $$$$$$$$$~       </text>
+      <text x="0" y="130" xml:space="preserve">             $$$$$$$$$ $$@    </text>
+      <text x="0" y="143" xml:space="preserve">             $$$$$$$$ -$$     </text>
+      <text x="0" y="156" xml:space="preserve">              $$$$$$$ -$$     </text>
+      <text x="0" y="169" xml:space="preserve">               $$$$           </text>
+      <text x="0" y="182" xml:space="preserve">                $             </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -3.480s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">             @                </text>
+      <text x="0" y="26" xml:space="preserve">       @@@@@@@@@@@            </text>
+      <text x="0" y="39" xml:space="preserve">     @@@@@@@@@@@@@@@@         </text>
+      <text x="0" y="52" xml:space="preserve">    $@@@@@@@@@@@@@@@@@        </text>
+      <text x="0" y="65" xml:space="preserve">    $$@@@@@@@@@@@@@@@@@       </text>
+      <text x="0" y="78" xml:space="preserve">    $$$@@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="91" xml:space="preserve">     -@@@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="104" xml:space="preserve">          --@@@@@@@@@@@@      </text>
+      <text x="0" y="117" xml:space="preserve">            -@@@@@@@@@@       </text>
+      <text x="0" y="130" xml:space="preserve">            -@@@@@@@@@-@@     </text>
+      <text x="0" y="143" xml:space="preserve">             $$$@@@@@--@@     </text>
+      <text x="0" y="156" xml:space="preserve">             -$$$$$@@-@@@     </text>
+      <text x="0" y="169" xml:space="preserve">              -$$$$           </text>
+      <text x="0" y="182" xml:space="preserve">                -$            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -3.360s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">          @@@ @               </text>
+      <text x="0" y="26" xml:space="preserve">      @@@@@@@@@@@@            </text>
+      <text x="0" y="39" xml:space="preserve">     @@@@@@@@@@@@@@@@         </text>
+      <text x="0" y="52" xml:space="preserve">    @@@@@@@@@@@@@@@@@@        </text>
+      <text x="0" y="65" xml:space="preserve">    @@@@@@@@@@@@@@@@@@        </text>
+      <text x="0" y="78" xml:space="preserve">    -@@@@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="91" xml:space="preserve">      --@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="104" xml:space="preserve">          ---@@@@@@@@@@@      </text>
+      <text x="0" y="117" xml:space="preserve">            -@@@@@@@@@        </text>
+      <text x="0" y="130" xml:space="preserve">            -@@@@@@@@@:@@     </text>
+      <text x="0" y="143" xml:space="preserve">             -@@@@@@@:@@      </text>
+      <text x="0" y="156" xml:space="preserve">             -@@@@@@@-@@      </text>
+      <text x="0" y="169" xml:space="preserve">              -@@@@           </text>
+      <text x="0" y="182" xml:space="preserve">               --@            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -3.240s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">         @@@@@@               </text>
+      <text x="0" y="26" xml:space="preserve">      ;@@@@@@@@@@             </text>
+      <text x="0" y="39" xml:space="preserve">     :@@@@@@@@@@@@@@          </text>
+      <text x="0" y="52" xml:space="preserve">    :@@@@@@@@@@@@@@@@         </text>
+      <text x="0" y="65" xml:space="preserve">    -@@@@@@@@@@@@@@@@@        </text>
+      <text x="0" y="78" xml:space="preserve">    ---@@@@@@@@@@@@@@@@       </text>
+      <text x="0" y="91" xml:space="preserve">      ---@@@@@@@@@@@@@@@      </text>
+      <text x="0" y="104" xml:space="preserve">           ---@@@@@@@@@       </text>
+      <text x="0" y="117" xml:space="preserve">            ::@@@@@@@@        </text>
+      <text x="0" y="130" xml:space="preserve">            --@@@@@@@;@       </text>
+      <text x="0" y="143" xml:space="preserve">            --@@@@@@@:$       </text>
+      <text x="0" y="156" xml:space="preserve">             --@@@@@:$$       </text>
+      <text x="0" y="169" xml:space="preserve">              --@$$           </text>
+      <text x="0" y="182" xml:space="preserve">               --$            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -3.120s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">         @@@@@@@              </text>
+      <text x="0" y="26" xml:space="preserve">      -=@@@@@@@@@             </text>
+      <text x="0" y="39" xml:space="preserve">     -=@@@@@@@@@@@@@          </text>
+      <text x="0" y="52" xml:space="preserve">     ;~@@@@@@@@@@@@@          </text>
+      <text x="0" y="65" xml:space="preserve">     ~~~@@@@@@@@@@@@$         </text>
+      <text x="0" y="78" xml:space="preserve">      ~~~@@@@@@@@@@@$         </text>
+      <text x="0" y="91" xml:space="preserve">        ~~~-@@@@@@@$$$        </text>
+      <text x="0" y="104" xml:space="preserve">           -~~@@@@$$$$        </text>
+      <text x="0" y="117" xml:space="preserve">            ;;;@@$$$$         </text>
+      <text x="0" y="130" xml:space="preserve">            ~~~@$$$$=$        </text>
+      <text x="0" y="143" xml:space="preserve">            -~~$$$$$;$        </text>
+      <text x="0" y="156" xml:space="preserve">             ~~$$$$$$$        </text>
+      <text x="0" y="169" xml:space="preserve">             -~~$$$           </text>
+      <text x="0" y="182" xml:space="preserve">              ---$            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -3.000s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">         !!@@@@$              </text>
+      <text x="0" y="26" xml:space="preserve">       !!!@@@@@$$             </text>
+      <text x="0" y="39" xml:space="preserve">      -!!!@@@@$$$$$           </text>
+      <text x="0" y="52" xml:space="preserve">      -:::@@@@$$$$$           </text>
+      <text x="0" y="65" xml:space="preserve">       :::@@@$$$$$$$          </text>
+      <text x="0" y="78" xml:space="preserve">       -::-@$$$$$$$#          </text>
+      <text x="0" y="91" xml:space="preserve">         ::--$$$$$$##         </text>
+      <text x="0" y="104" xml:space="preserve">           -:::$$$###         </text>
+      <text x="0" y="117" xml:space="preserve">            !!!$$$##          </text>
+      <text x="0" y="130" xml:space="preserve">            :::$$####         </text>
+      <text x="0" y="143" xml:space="preserve">            -::$$####         </text>
+      <text x="0" y="156" xml:space="preserve">             :::#####         </text>
+      <text x="0" y="169" xml:space="preserve">             -::###           </text>
+      <text x="0" y="182" xml:space="preserve">              ---#            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -2.880s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">          ***$$$#             </text>
+      <text x="0" y="26" xml:space="preserve">         ####$$$#             </text>
+      <text x="0" y="39" xml:space="preserve">        -###$$$###            </text>
+      <text x="0" y="52" xml:space="preserve">        -;;;$$$###            </text>
+      <text x="0" y="65" xml:space="preserve">         ;;;;$$###*           </text>
+      <text x="0" y="78" xml:space="preserve">         --;;$$###*           </text>
+      <text x="0" y="91" xml:space="preserve">          ----####*           </text>
+      <text x="0" y="104" xml:space="preserve">            ;;;##**           </text>
+      <text x="0" y="117" xml:space="preserve">            -####**           </text>
+      <text x="0" y="130" xml:space="preserve">            -;;;#**           </text>
+      <text x="0" y="143" xml:space="preserve">            -;;;#**           </text>
+      <text x="0" y="156" xml:space="preserve">             ;;;**!           </text>
+      <text x="0" y="169" xml:space="preserve">             ;;;**            </text>
+      <text x="0" y="182" xml:space="preserve">             ----*            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -2.760s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">           -#####             </text>
+      <text x="0" y="26" xml:space="preserve">           -$$$##             </text>
+      <text x="0" y="39" xml:space="preserve">           $$$$#*             </text>
+      <text x="0" y="52" xml:space="preserve">           ====#*             </text>
+      <text x="0" y="65" xml:space="preserve">           -===#*             </text>
+      <text x="0" y="78" xml:space="preserve">           -====*=            </text>
+      <text x="0" y="91" xml:space="preserve">            ----*=            </text>
+      <text x="0" y="104" xml:space="preserve">            -===*=            </text>
+      <text x="0" y="117" xml:space="preserve">            -$$$!=            </text>
+      <text x="0" y="130" xml:space="preserve">            -===!=            </text>
+      <text x="0" y="143" xml:space="preserve">             ===!=            </text>
+      <text x="0" y="156" xml:space="preserve">             ===!=            </text>
+      <text x="0" y="169" xml:space="preserve">             ===!             </text>
+      <text x="0" y="182" xml:space="preserve">             ---=             </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -2.640s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">             --$$$!           </text>
+      <text x="0" y="26" xml:space="preserve">             --@@@!           </text>
+      <text x="0" y="39" xml:space="preserve">             --@@@@           </text>
+      <text x="0" y="52" xml:space="preserve">             --====           </text>
+      <text x="0" y="65" xml:space="preserve">             --===!           </text>
+      <text x="0" y="78" xml:space="preserve">            --====!           </text>
+      <text x="0" y="91" xml:space="preserve">            -----=            </text>
+      <text x="0" y="104" xml:space="preserve">            --====            </text>
+      <text x="0" y="117" xml:space="preserve">            --@@@=            </text>
+      <text x="0" y="130" xml:space="preserve">            --====            </text>
+      <text x="0" y="143" xml:space="preserve">            --===             </text>
+      <text x="0" y="156" xml:space="preserve">            --===             </text>
+      <text x="0" y="169" xml:space="preserve">             -===             </text>
+      <text x="0" y="182" xml:space="preserve">             ----             </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -2.520s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">             ---~$$$          </text>
+      <text x="0" y="26" xml:space="preserve">             ---~@@@@         </text>
+      <text x="0" y="39" xml:space="preserve">            -----~@@@=        </text>
+      <text x="0" y="52" xml:space="preserve">            -----~!!!=        </text>
+      <text x="0" y="65" xml:space="preserve">           ------!!!!         </text>
+      <text x="0" y="78" xml:space="preserve">           ------!!-;         </text>
+      <text x="0" y="91" xml:space="preserve">           --------;          </text>
+      <text x="0" y="104" xml:space="preserve">           ----!!!            </text>
+      <text x="0" y="117" xml:space="preserve">           ---@@@:            </text>
+      <text x="0" y="130" xml:space="preserve">           ---!!!:            </text>
+      <text x="0" y="143" xml:space="preserve">           ---!!!:            </text>
+      <text x="0" y="156" xml:space="preserve">           ---!!!             </text>
+      <text x="0" y="169" xml:space="preserve">            --!!!             </text>
+      <text x="0" y="182" xml:space="preserve">            ----~             </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -2.400s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">              :::::$$         </text>
+      <text x="0" y="26" xml:space="preserve">             ~~:::::@$$       </text>
+      <text x="0" y="39" xml:space="preserve">           -~~~:::::@@@:      </text>
+      <text x="0" y="52" xml:space="preserve">           -~~~~::::!!!:      </text>
+      <text x="0" y="65" xml:space="preserve">          --~~~~::::!!!       </text>
+      <text x="0" y="78" xml:space="preserve">          ---~~~:::-!!~       </text>
+      <text x="0" y="91" xml:space="preserve">         ----~~~~--!!         </text>
+      <text x="0" y="104" xml:space="preserve">         ----~~!!!-           </text>
+      <text x="0" y="117" xml:space="preserve">          ---~~@@@            </text>
+      <text x="0" y="130" xml:space="preserve">         -----~!!!            </text>
+      <text x="0" y="143" xml:space="preserve">         ------!!-            </text>
+      <text x="0" y="156" xml:space="preserve">         -----!!!             </text>
+      <text x="0" y="169" xml:space="preserve">           ---!!-             </text>
+      <text x="0" y="182" xml:space="preserve">            ----              </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -2.280s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">              ;;=====         </text>
+      <text x="0" y="26" xml:space="preserve">             ;;;;=====$-      </text>
+      <text x="0" y="39" xml:space="preserve">          ::;;;;;======$-     </text>
+      <text x="0" y="52" xml:space="preserve">          ::;;;;;;=====!@     </text>
+      <text x="0" y="65" xml:space="preserve">         ::::;;;;;====!!!     </text>
+      <text x="0" y="78" xml:space="preserve">         ::::;;;;;===!!!      </text>
+      <text x="0" y="91" xml:space="preserve">        ~~::::;;;;-!!!        </text>
+      <text x="0" y="104" xml:space="preserve">        ~~::::;;!!-           </text>
+      <text x="0" y="117" xml:space="preserve">         ~::::;@@@            </text>
+      <text x="0" y="130" xml:space="preserve">        ~$::::;!!!            </text>
+      <text x="0" y="143" xml:space="preserve">        ~@~::::!!-            </text>
+      <text x="0" y="156" xml:space="preserve">        ~~~::::!!             </text>
+      <text x="0" y="169" xml:space="preserve">           :::!!-             </text>
+      <text x="0" y="182" xml:space="preserve">            :---              </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -2.160s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">               !!!!!*         </text>
+      <text x="0" y="26" xml:space="preserve">             !!!!!!!***$      </text>
+      <text x="0" y="39" xml:space="preserve">          ===!!!!!!!!***$     </text>
+      <text x="0" y="52" xml:space="preserve">         =====!!!!!!!****$    </text>
+      <text x="0" y="65" xml:space="preserve">        ;======!!!!!!!***=    </text>
+      <text x="0" y="78" xml:space="preserve">       ;;;=====!!!!!!!*==-    </text>
+      <text x="0" y="91" xml:space="preserve">      ;;;;=====!!!!!!=--      </text>
+      <text x="0" y="104" xml:space="preserve">       ;;;;========           </text>
+      <text x="0" y="117" xml:space="preserve">        ;;;=====$$            </text>
+      <text x="0" y="130" xml:space="preserve">       ;$;;=======            </text>
+      <text x="0" y="143" xml:space="preserve">       ;$;;;=====-            </text>
+      <text x="0" y="156" xml:space="preserve">       ;;$;;=====             </text>
+      <text x="0" y="169" xml:space="preserve">           ;;===              </text>
+      <text x="0" y="182" xml:space="preserve">            ;--               </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -2.040s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">               * ###          </text>
+      <text x="0" y="26" xml:space="preserve">            ****########      </text>
+      <text x="0" y="39" xml:space="preserve">         !*******########     </text>
+      <text x="0" y="52" xml:space="preserve">        !!********########    </text>
+      <text x="0" y="65" xml:space="preserve">        !!!********#######    </text>
+      <text x="0" y="78" xml:space="preserve">     !!!!!!********######;    </text>
+      <text x="0" y="91" xml:space="preserve">     !!!!!!!********##-;      </text>
+      <text x="0" y="104" xml:space="preserve">      !!!!!!*****;--          </text>
+      <text x="0" y="117" xml:space="preserve">        !!!!!****#            </text>
+      <text x="0" y="130" xml:space="preserve">     ==#!!!!!!***;            </text>
+      <text x="0" y="143" xml:space="preserve">      ==#!!!!!!*;             </text>
+      <text x="0" y="156" xml:space="preserve">      ==#!!!!!!!;             </text>
+      <text x="0" y="169" xml:space="preserve">           !!!!;              </text>
+      <text x="0" y="182" xml:space="preserve">            !--               </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -1.920s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                $             </text>
+      <text x="0" y="26" xml:space="preserve">            ##$$$$$$$$$       </text>
+      <text x="0" y="39" xml:space="preserve">         ######$$$$$$$$$$     </text>
+      <text x="0" y="52" xml:space="preserve">        #######$$$$$$$$$$$    </text>
+      <text x="0" y="65" xml:space="preserve">       ##########$$$$$$$$$    </text>
+      <text x="0" y="78" xml:space="preserve">     ***#########$$$$$$$$$    </text>
+      <text x="0" y="91" xml:space="preserve">     ***##########$$$$$$;     </text>
+      <text x="0" y="104" xml:space="preserve">      ***#########;;          </text>
+      <text x="0" y="117" xml:space="preserve">       ***#######*            </text>
+      <text x="0" y="130" xml:space="preserve">     ******######;            </text>
+      <text x="0" y="143" xml:space="preserve">     ***-***#####             </text>
+      <text x="0" y="156" xml:space="preserve">     ********###;             </text>
+      <text x="0" y="169" xml:space="preserve">           ***#;              </text>
+      <text x="0" y="182" xml:space="preserve">            *-                </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -1.800s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">            $$@@@@@@@@        </text>
+      <text x="0" y="39" xml:space="preserve">         $$$$$$@@@@@@@@@      </text>
+      <text x="0" y="52" xml:space="preserve">       $$$$$$$$$@@@@@@@@@@    </text>
+      <text x="0" y="65" xml:space="preserve">      $$$$$$$$$$@@@@@@@@@@    </text>
+      <text x="0" y="78" xml:space="preserve">    #$$$$$$$$$$$$$@@@@@@@@    </text>
+      <text x="0" y="91" xml:space="preserve">     #$$$$$$$$$$$$$$@@@@@     </text>
+      <text x="0" y="104" xml:space="preserve">      #$$$$$$$$$$$$           </text>
+      <text x="0" y="117" xml:space="preserve">       -$$$$$$$$$             </text>
+      <text x="0" y="130" xml:space="preserve">    ### #$$$$$$$$             </text>
+      <text x="0" y="143" xml:space="preserve">     ##= #$$$$$$$             </text>
+      <text x="0" y="156" xml:space="preserve">     ##= ####$$$              </text>
+      <text x="0" y="169" xml:space="preserve">           ###$               </text>
+      <text x="0" y="182" xml:space="preserve">             #                </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -1.680s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">          @@@@@@@@@@@         </text>
+      <text x="0" y="39" xml:space="preserve">        @@@@@@@@@@@@@@@@      </text>
+      <text x="0" y="52" xml:space="preserve">       @@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="65" xml:space="preserve">    $$@@@@@@@@@@@@@@@@@@@@    </text>
+      <text x="0" y="78" xml:space="preserve">    $$@@@@@@@@@@@@@@@@@@@@    </text>
+      <text x="0" y="91" xml:space="preserve">     $$$@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="104" xml:space="preserve">     -$$$$@@@@@@@@@---        </text>
+      <text x="0" y="117" xml:space="preserve">       -$$$@@@@@@@            </text>
+      <text x="0" y="130" xml:space="preserve">    $$$ -$$$$@@@@@            </text>
+      <text x="0" y="143" xml:space="preserve">     $$  $$$$$$$@             </text>
+      <text x="0" y="156" xml:space="preserve">     $$$ -$$$$$$$             </text>
+      <text x="0" y="169" xml:space="preserve">           $$$$$              </text>
+      <text x="0" y="182" xml:space="preserve">            -$                </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -1.560s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">          @@@@@@@@@@          </text>
+      <text x="0" y="39" xml:space="preserve">         @@@@@@@@@@@@@@       </text>
+      <text x="0" y="52" xml:space="preserve">       @@@@@@@@@@@@@@@@@      </text>
+      <text x="0" y="65" xml:space="preserve">    :@@@@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="78" xml:space="preserve">    -@@@@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="91" xml:space="preserve">     -@@@@@@@@@@@@@@@@@@@     </text>
+      <text x="0" y="104" xml:space="preserve">      -@@@@@@@@@@@@@--        </text>
+      <text x="0" y="117" xml:space="preserve">        -@@@@@@@@@            </text>
+      <text x="0" y="130" xml:space="preserve">    -@@ -@@@@@@@@@            </text>
+      <text x="0" y="143" xml:space="preserve">     -@@ -@@@@@@@@            </text>
+      <text x="0" y="156" xml:space="preserve">     -@@ -@@@@@@@             </text>
+      <text x="0" y="169" xml:space="preserve">           -@@@@              </text>
+      <text x="0" y="182" xml:space="preserve">            -@                </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -1.440s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">          ;@@@@@@@@@          </text>
+      <text x="0" y="39" xml:space="preserve">         @@@@@@@@@@@@         </text>
+      <text x="0" y="52" xml:space="preserve">       ;@@@@@@@@@@@@@@@       </text>
+      <text x="0" y="65" xml:space="preserve">     :@@@@@@@@@@@@@@@@@       </text>
+      <text x="0" y="78" xml:space="preserve">     --@@@@@@@@@@@@@@@@@      </text>
+      <text x="0" y="91" xml:space="preserve">     --@@@@@@@@@@@@@@@@@      </text>
+      <text x="0" y="104" xml:space="preserve">      ---@@@@@@@@@@@@@        </text>
+      <text x="0" y="117" xml:space="preserve">      @ --@@@@@@@@            </text>
+      <text x="0" y="130" xml:space="preserve">     -@@--@@@@@@@@            </text>
+      <text x="0" y="143" xml:space="preserve">     ::@@--@@@@@@@            </text>
+      <text x="0" y="156" xml:space="preserve">     --@@--@@@@@@             </text>
+      <text x="0" y="169" xml:space="preserve">           -@@@@              </text>
+      <text x="0" y="182" xml:space="preserve">            --@               </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -1.320s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">          =;@@@@@@            </text>
+      <text x="0" y="39" xml:space="preserve">         ;@@@@@@@@@@@         </text>
+      <text x="0" y="52" xml:space="preserve">       -@@@@@@@@@@@@@         </text>
+      <text x="0" y="65" xml:space="preserve">     -~~@@@@@@@@@@@@$$        </text>
+      <text x="0" y="78" xml:space="preserve">     -~~@@@@@@@@@@@@$$        </text>
+      <text x="0" y="91" xml:space="preserve">      -~~@@@@@@@@@@$$$$       </text>
+      <text x="0" y="104" xml:space="preserve">       -~~@@@@@@@@@$$         </text>
+      <text x="0" y="117" xml:space="preserve">      ==@@~@@@@@@$            </text>
+      <text x="0" y="130" xml:space="preserve">     -~~@@~@@@@$$$            </text>
+      <text x="0" y="143" xml:space="preserve">      ;;@@~~@@$$$$            </text>
+      <text x="0" y="156" xml:space="preserve">      ~~~@@~@$$$$             </text>
+      <text x="0" y="169" xml:space="preserve">           ~~$$$$             </text>
+      <text x="0" y="182" xml:space="preserve">            ---$              </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -1.200s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">          !!!@@$$$            </text>
+      <text x="0" y="39" xml:space="preserve">         -!!@@$$$$$           </text>
+      <text x="0" y="52" xml:space="preserve">        !!@@@@$$$$$$          </text>
+      <text x="0" y="65" xml:space="preserve">       :::@@@$$$$$$$#         </text>
+      <text x="0" y="78" xml:space="preserve">       :::@@$$$$$$$##         </text>
+      <text x="0" y="91" xml:space="preserve">       -:::$$$$$$$$##         </text>
+      <text x="0" y="104" xml:space="preserve">        -:::$$$$$$$##         </text>
+      <text x="0" y="117" xml:space="preserve">       !!!$$$$$$$$            </text>
+      <text x="0" y="130" xml:space="preserve">       :::$$:$$$$#            </text>
+      <text x="0" y="143" xml:space="preserve">       !!::$:$$$$#            </text>
+      <text x="0" y="156" xml:space="preserve">       ::::$$$$$#             </text>
+      <text x="0" y="169" xml:space="preserve">           :::$$#             </text>
+      <text x="0" y="182" xml:space="preserve">            ---#              </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -1.080s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">           ###$$##            </text>
+      <text x="0" y="39" xml:space="preserve">          -***$###            </text>
+      <text x="0" y="52" xml:space="preserve">         **##$$###*           </text>
+      <text x="0" y="65" xml:space="preserve">         ;;;;$$###*           </text>
+      <text x="0" y="78" xml:space="preserve">         ;;;;$$###*           </text>
+      <text x="0" y="91" xml:space="preserve">         -;;;$####*           </text>
+      <text x="0" y="104" xml:space="preserve">          ;;;;###**           </text>
+      <text x="0" y="117" xml:space="preserve">         ****####*            </text>
+      <text x="0" y="130" xml:space="preserve">         ;;;;####*            </text>
+      <text x="0" y="143" xml:space="preserve">         ;;;;####*            </text>
+      <text x="0" y="156" xml:space="preserve">         -;;;###*             </text>
+      <text x="0" y="169" xml:space="preserve">            ;;;#*             </text>
+      <text x="0" y="182" xml:space="preserve">            ----*             </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -0.960s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">            $$$$*             </text>
+      <text x="0" y="39" xml:space="preserve">            ###$*             </text>
+      <text x="0" y="52" xml:space="preserve">           -$$$#*!            </text>
+      <text x="0" y="65" xml:space="preserve">           -===#*!            </text>
+      <text x="0" y="78" xml:space="preserve">           -===**!            </text>
+      <text x="0" y="91" xml:space="preserve">           -====*!            </text>
+      <text x="0" y="104" xml:space="preserve">           -====*=            </text>
+      <text x="0" y="117" xml:space="preserve">           -###**             </text>
+      <text x="0" y="130" xml:space="preserve">           -===**             </text>
+      <text x="0" y="143" xml:space="preserve">           -====*             </text>
+      <text x="0" y="156" xml:space="preserve">           -====*             </text>
+      <text x="0" y="169" xml:space="preserve">            -===!             </text>
+      <text x="0" y="182" xml:space="preserve">            ----!             </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -0.840s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">             -@@@@            </text>
+      <text x="0" y="39" xml:space="preserve">             -@$$$            </text>
+      <text x="0" y="52" xml:space="preserve">            ---@@@!           </text>
+      <text x="0" y="65" xml:space="preserve">            ---===!           </text>
+      <text x="0" y="78" xml:space="preserve">            ---===!           </text>
+      <text x="0" y="91" xml:space="preserve">            --====!           </text>
+      <text x="0" y="104" xml:space="preserve">            --====!           </text>
+      <text x="0" y="117" xml:space="preserve">             --$$$!           </text>
+      <text x="0" y="130" xml:space="preserve">             --===!           </text>
+      <text x="0" y="143" xml:space="preserve">             -=====           </text>
+      <text x="0" y="156" xml:space="preserve">             -=====           </text>
+      <text x="0" y="169" xml:space="preserve">             -====            </text>
+      <text x="0" y="182" xml:space="preserve">             ----;            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -0.720s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">            ----@@@           </text>
+      <text x="0" y="39" xml:space="preserve">            ----$$$;          </text>
+      <text x="0" y="52" xml:space="preserve">           ------@@$$         </text>
+      <text x="0" y="65" xml:space="preserve">           ------!!!!         </text>
+      <text x="0" y="78" xml:space="preserve">           ------!!!!         </text>
+      <text x="0" y="91" xml:space="preserve">           ------!!!;         </text>
+      <text x="0" y="104" xml:space="preserve">           -----!!!!          </text>
+      <text x="0" y="117" xml:space="preserve">            -----$$$$         </text>
+      <text x="0" y="130" xml:space="preserve">            -----!!!!         </text>
+      <text x="0" y="143" xml:space="preserve">            -----!!!!         </text>
+      <text x="0" y="156" xml:space="preserve">             ----!!!;         </text>
+      <text x="0" y="169" xml:space="preserve">             --!!!            </text>
+      <text x="0" y="182" xml:space="preserve">             ----:            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -0.600s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">            ~~~::@@$          </text>
+      <text x="0" y="39" xml:space="preserve">           -~~~:::$$~         </text>
+      <text x="0" y="52" xml:space="preserve">          --~~~~::::$$        </text>
+      <text x="0" y="65" xml:space="preserve">         ---~~~~::::!!!       </text>
+      <text x="0" y="78" xml:space="preserve">         ----~~~::::!!!       </text>
+      <text x="0" y="91" xml:space="preserve">         ----~~~~::!!!~       </text>
+      <text x="0" y="104" xml:space="preserve">         ----~~~~:!!!~        </text>
+      <text x="0" y="117" xml:space="preserve">            -~~~~~::$$$       </text>
+      <text x="0" y="130" xml:space="preserve">            --~~~!::!!!       </text>
+      <text x="0" y="143" xml:space="preserve">            --~~~!:!!@@       </text>
+      <text x="0" y="156" xml:space="preserve">             -~~~~:!!!!       </text>
+      <text x="0" y="169" xml:space="preserve">             -~~!!!           </text>
+      <text x="0" y="182" xml:space="preserve">              ----            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -0.480s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">            ;;;;;=@$          </text>
+      <text x="0" y="39" xml:space="preserve">         :::;;;;;===@         </text>
+      <text x="0" y="52" xml:space="preserve">         :::;;;;;=====-       </text>
+      <text x="0" y="65" xml:space="preserve">        ~::::;;;;;====!!-     </text>
+      <text x="0" y="78" xml:space="preserve">        ~::::;;;;;====!!-     </text>
+      <text x="0" y="91" xml:space="preserve">       ~~~::::;;;;;==!!-      </text>
+      <text x="0" y="104" xml:space="preserve">         ~::::;;;;;;!!-       </text>
+      <text x="0" y="117" xml:space="preserve">            ::;;;;;!==$$      </text>
+      <text x="0" y="130" xml:space="preserve">            :::;;;;!;=!!-     </text>
+      <text x="0" y="143" xml:space="preserve">            :::;;;!!;;@@      </text>
+      <text x="0" y="156" xml:space="preserve">             :::;;!;;!!!      </text>
+      <text x="0" y="169" xml:space="preserve">             :::;!!           </text>
+      <text x="0" y="182" xml:space="preserve">              :---            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -0.360s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">          ===!!!!!!$          </text>
+      <text x="0" y="39" xml:space="preserve">         =====!!!!!!!         </text>
+      <text x="0" y="52" xml:space="preserve">       ;;=====!!!!!!!*$       </text>
+      <text x="0" y="65" xml:space="preserve">       ;;=====!!!!!!!!**$     </text>
+      <text x="0" y="78" xml:space="preserve">      ;;;======!!!!!!!*==     </text>
+      <text x="0" y="91" xml:space="preserve">      ;;;;=====!!!!!!!!=-     </text>
+      <text x="0" y="104" xml:space="preserve">        ;;======!!!!!==-      </text>
+      <text x="0" y="117" xml:space="preserve">            =====!!!== !      </text>
+      <text x="0" y="130" xml:space="preserve">            =====!!!=-!!=     </text>
+      <text x="0" y="143" xml:space="preserve">            ======!==!!$$     </text>
+      <text x="0" y="156" xml:space="preserve">             ========!!==     </text>
+      <text x="0" y="169" xml:space="preserve">              =====           </text>
+      <text x="0" y="182" xml:space="preserve">               =--            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -0.240s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">          *******###          </text>
+      <text x="0" y="39" xml:space="preserve">       !!!*******####         </text>
+      <text x="0" y="52" xml:space="preserve">      !!!!********#####       </text>
+      <text x="0" y="65" xml:space="preserve">     !!!!!!*******########    </text>
+      <text x="0" y="78" xml:space="preserve">     !!!!!!********######;    </text>
+      <text x="0" y="91" xml:space="preserve">     !!!!!!!********####;     </text>
+      <text x="0" y="104" xml:space="preserve">        --!!!********##;      </text>
+      <text x="0" y="117" xml:space="preserve">            !********;        </text>
+      <text x="0" y="130" xml:space="preserve">            !!*******; ##;    </text>
+      <text x="0" y="143" xml:space="preserve">            !!******; **#     </text>
+      <text x="0" y="156" xml:space="preserve">             !!*****; **;     </text>
+      <text x="0" y="169" xml:space="preserve">              !!!*;           </text>
+      <text x="0" y="182" xml:space="preserve">                !-            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
+    <g class="ascii-frame" style="animation-delay: -0.120s;">
+      <text x="0" y="0" xml:space="preserve">                              </text>
+      <text x="0" y="13" xml:space="preserve">                              </text>
+      <text x="0" y="26" xml:space="preserve">         #####$$$$$$          </text>
+      <text x="0" y="39" xml:space="preserve">      #########$$$$$$$        </text>
+      <text x="0" y="52" xml:space="preserve">     **#########$$$$$$$       </text>
+      <text x="0" y="65" xml:space="preserve">    ***#########$$$$$$$$$$    </text>
+      <text x="0" y="78" xml:space="preserve">    ****#########$$$$$$$$$    </text>
+      <text x="0" y="91" xml:space="preserve">     ***##########$$$$$$$     </text>
+      <text x="0" y="104" xml:space="preserve">        ---########$$$$$-     </text>
+      <text x="0" y="117" xml:space="preserve">            ########$$;       </text>
+      <text x="0" y="130" xml:space="preserve">            #########; $$$    </text>
+      <text x="0" y="143" xml:space="preserve">             ########  $$     </text>
+      <text x="0" y="156" xml:space="preserve">             #######; ###     </text>
+      <text x="0" y="169" xml:space="preserve">              #####           </text>
+      <text x="0" y="182" xml:space="preserve">                #-            </text>
+      <text x="0" y="195" xml:space="preserve">                              </text>
+    </g>
   </g>
 
   <text x="189" y="340" text-anchor="middle" class="mono loc-text">Abidjan, Côte d'Ivoire</text>
