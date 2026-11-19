@@ -73,24 +73,24 @@
 
   <!-- RIGHT COLUMN: About, Stack, Elsewhere -->
   <text x="386" y="102" class="mono sec-head">About</text>
-  <text x="386" y="128" class="mono sec-body">Builder &amp; R&amp;D Architect — Hardware, Software &amp; AI.</text>
-  <text x="386" y="150" class="mono sec-body">Ships industrial systems, AI agents &amp; SaaS in Africa.</text>
-  <text x="386" y="172" class="mono sec-body">Pioneering African autonomous LiDAR &amp; wave energy.</text>
+  <text x="386" y="128" class="mono sec-body">AI &amp; Data Systems Architect · R&amp;D &amp; Continuous Improvement.</text>
+  <text x="386" y="150" class="mono sec-body">Electronics, client-server software &amp; machine data on the field.</text>
+  <text x="386" y="172" class="mono sec-body">Building African autonomous LiDAR/radar &amp; wave energy.</text>
 
   <!-- Horizontal Divider -->
   <line x1="386" y1="196" x2="844" y2="196" stroke="#222222" stroke-width="1"/>
 
   <text x="386" y="226" class="mono sec-head">Stack</text>
-  <text x="386" y="252" class="mono sec-body">Python · C/C++ · Vue.js · AI/RAG · IoT · SCADA · Win</text>
+  <text x="386" y="252" class="mono sec-body">Python · C/C++ · Vue.js · RAG/AI · Predictive ML · IoT · SCADA</text>
 
   <text x="386" y="294" class="mono sec-head">Elsewhere</text>
-  <text x="386" y="320" class="mono sec-body">emmanuel.ecobin.tech · linkedin.com/in/korekou-emmanuel-gbra</text>
+  <text x="386" y="320" class="mono sec-body">emmanuelgbra.com · linkedin.com/in/korekou-emmanuel-gbra</text>
 
   <!-- Bottom Interactive Prompt Bar -->
   <rect x="24" y="384" width="852" height="44" rx="7" ry="7" fill="#0f0f0f" stroke="#2e2e2e" stroke-width="1.2"/>
   <text x="42" y="411" class="mono prompt-caret">&gt;</text>
   <rect x="62" y="397" width="9" height="18" class="cursor"/>
-  <text x="76" y="411" class="mono prompt-hint">Try "build industrial AI, hardware &amp; software for Africa"</text>
+  <text x="76" y="411" class="mono prompt-hint">Try "make machine data speak to solve real field problems"</text>
 
   <!-- Bottom Shortcuts Hint -->
   <text x="42" y="451" class="mono shortcut-hint">? for shortcuts</text>
