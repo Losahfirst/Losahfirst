@@ -39,11 +39,11 @@
 <br />
 
 <p align="center">
-  <sub>Currently building &amp; researching</sub>
+  <sub>Core focus &amp; active R&amp;D</sub>
 </p>
 
 <p align="center">
-  <a href="https://emmanuel.ecobin.tech/article/7">
-    <img src="./assets/rd-strip.svg" width="100%" alt="Currently building and researching: Bluetooth to Satellite IoT, Autonomous LiDAR, Wave Energy, ECOBIN+" />
+  <a href="https://emmanuel.ecobin.tech/representative-works">
+    <img src="./assets/rd-strip.svg" width="100%" alt="Core focus and R&D: Industrial Systems, AI & Voice Agents, Autonomous LiDAR, Wave Energy" />
   </a>
 </p>
